@@ -1,0 +1,6 @@
+@custom-media --landscape (orientation: landscape);
+@custom-media --portrait (orientation: portrait);
+@custom-media --reduce (prefers-reduced-motion: reduce);
+@custom-media --not-reduce (prefers-reduced-motion: no-preference);
+@custom-media --dark (prefers-color-scheme: dark);
+@custom-media --light (prefers-color-scheme: light);

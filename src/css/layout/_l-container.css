@@ -1,0 +1,6 @@
+.l-container {
+  display: grid;
+  grid-template-rows: var(--header-height, auto) 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}

@@ -1,0 +1,61 @@
+# EditorConfig is awesome: http://EditorConfig.org
+####################
+# ファイルの指定
+####################
+# *             "/"を除いた任意の文字列
+# **            任意の文字列
+# ?             任意の一文字
+# [name]        nameに一致するもの
+# [!name]       nameに一致しないもの
+# {s1,s2,s3}    s1,s2,s3に一致する各々
+#
+# ex)
+# [*.html]          HTMLファイル
+# [*.{css,scss}]    CSS,SCSSファイル
+# [lib/**.js]       libディレクトリ配下のjsファイル
+# [!package.json]   package.json以外
+#
+####################
+# スタイルの指定
+####################
+# root                      true | false
+# indent_style              tab | space
+# indent_size               Integer（整数） | tab
+# tab_width                 A Positive Integer（正の整数）
+# end_of_line               lf | cr | crlf
+# charset                   latin1 | utf-8 | utf-8-bom | utf-16be | utf-16le
+# trim_trailing_whitespace  true | false
+# insert_final_newline      true | false
+#
+#####################
+
+root = true
+
+[*, !*.{yml, svg}]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.css]
+indent_style = space
+indent_size = 2
+
+[*.scss]
+indent_style = space
+indent_size = 2
+
+[*.js]
+indent_style = space
+indent_size = 2
+
+[*.json]
+indent_style = space
+indent_size = 2
+
+[*.md]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = false

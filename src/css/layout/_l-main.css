@@ -1,0 +1,17 @@
+.l-main {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  view-transition-name: main;
+}
+
+/* .l-main 配下にView Transition を適用する場合 */
+::view-transition-group(main) {
+}
+
+::view-transition-old(main) {
+  animation: 0.6s ease both fadeOut;
+}
+
+::view-transition-new(main) {
+  animation: 0.6s ease both fadeIn;
+}

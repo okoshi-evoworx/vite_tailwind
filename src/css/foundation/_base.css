@@ -1,0 +1,38 @@
+/* ダイアログが開いている時はスムーススクロールOFF */
+html:not(:has(dialog[open]), .dialog-open) {
+  scroll-behavior: smooth;
+}
+
+/* 参考：System colors */
+/* https://developer.mozilla.org/ja/docs/Web/CSS/system-color */
+body {
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text, CanvasText);
+  background-color: var(--color-white, Canvas);
+}
+
+:where([id]) {
+  scroll-margin-top: var(--header-height, 0);
+}
+
+:where(:link) {
+  color: var(--color-link, LinkText);
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.0625rem;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: auto;
+}
+
+:where(:visited) {
+  color: var(--color-link, VisitedText);
+}
+
+/* View Transiton API */
+/* https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Selectors/::view-transition */
+@view-transition {
+  navigation: auto;
+}

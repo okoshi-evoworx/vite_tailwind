@@ -1,0 +1,73 @@
+.l-trigger {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  place-content: center;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: var(--hex-text);
+  appearance: none;
+  cursor: pointer;
+  background-color: var(--hex-smoke);
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before,
+  &::after,
+  > span {
+    display: block;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    width: 22px;
+    height: 2px;
+    background-color: currentcolor;
+    border-radius: 100vmax;
+
+    /* 回転が先、移動が後 */
+    transition:
+      translate 0.3s ease 0.3s,
+      opacity 0.3s ease,
+      rotate 0.3s ease;
+  }
+
+  &::before {
+    translate: 0 -6px;
+  }
+
+  &::after {
+    translate: 0 6px;
+  }
+
+  &[aria-expanded="true"] {
+    &::before,
+    &::after,
+    > span {
+      /* 移動が先、回転が後 */
+      transition:
+        translate 0.3s ease,
+        opacity 0.3s ease 0.3s,
+        rotate 0.3s ease 0.3s;
+    }
+
+    &::before {
+      rotate: 45deg;
+      translate: 0 0;
+    }
+
+    &::after {
+      rotate: -45deg;
+      translate: 0 0;
+    }
+
+    > span {
+      opacity: 0;
+    }
+  }
+}

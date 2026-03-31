@@ -1,0 +1,6 @@
+@import-glob "./custom-media/**/*.css";/* CustomMedia使用のためにlayer外に設置 */
+@import-glob "./foundation/**/*.css" layer(foundation);
+@import-glob "./layout/**/*.css" layer(layout);
+@import-glob "./object/components/**/*.css" layer(components);
+@import-glob "./object/projects/**/*.css" layer(projects);
+@import-glob "./object/utilities/**/*.css" layer(utilities);

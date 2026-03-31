@@ -1,0 +1,23 @@
+.skip-to-content {
+  position: absolute;
+
+  &:not(:focus) {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(50%);
+  }
+
+  &:focus {
+    z-index: calc(var(--z-header, 10) + 1);
+    padding: 1rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--hex-white, white);
+    background-color: var(--hex-link, LinkText);
+  }
+}

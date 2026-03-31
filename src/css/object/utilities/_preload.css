@@ -1,0 +1,7 @@
+/* preventPageLoadTransitions.jsと併用 */
+/* https://chriscoyier.net/2023/04/05/prevent-transitions-as-a-page-is-loading/ */
+.preload * {
+  transition: none;
+  animation-duration: 0.01ms;
+  animation-iteration-count: 1;
+}

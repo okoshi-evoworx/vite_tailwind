@@ -1,0 +1,18 @@
+{
+    "biome.requireConfiguration": true,
+    "biome.configurationPath": "",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.biome": "explicit",
+    },
+    "files.associations": {
+      "*.css": "tailwindcss"
+    },
+    "editor.quickSuggestions": {
+      "strings": "on"
+    },
+    "tailwindCSS.includeLanguages": {
+      "plaintext": "html"
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "markuplint.enable": true
+}
