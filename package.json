@@ -6,11 +6,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "concurrently 'npm run biome check src/**/*' 'npm run check:html' -c '#60a5fa,#663399,#1572eb'",
+    "check": "concurrently 'npx biome check src/**/*' 'npx markuplint **/*.html' -c '#60a5fa,#663399,#1572eb'",
     "check:js": "biome check src/**/*.js",
     "check:css": "biome check src/**/*.css",
-    "check:html": "markuplint '**/*.html'",
-    "fix": "biome check --write src/js/**/*",
+    "check:html": "concurrently 'npx biome check **/*.html' 'npx markuplint **/*.html'",
+    "fix": "biome check --write src/**/*",
     "fix:js": "biome check --write src/js/**/*.js",
     "fix:css": "biome check --write src/css/**/*.css",
     "test": "npx playwright test"
@@ -20,7 +20,6 @@
     "@biomejs/biome": "2.4.9",
     "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4.2.2",
-    "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^25.5.0",
     "browserslist": "^4.28.1",
     "concurrently": "^9.2.1",
@@ -31,6 +30,8 @@
     "postcss-import": "^16.1.1",
     "postcss-import-ext-glob": "^2.1.1",
     "postcss-lightningcss": "^1.0.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "sharp": "^0.34.5",
     "svgo": "^4.0.1",
     "vite": "^8.0.3",
@@ -38,7 +39,7 @@
   },
   "dependencies": {
     "daisyui": "^5.5.19",
-    "tailwindcss": "next"
+    "tailwindcss": "^4.2.2"
   },
   "browserslist": [
     "baseline widely available"

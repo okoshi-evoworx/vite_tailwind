@@ -1,4 +1,4 @@
 {
   "extends": ["markuplint:recommended"],
-  "excludeFiles": ["node_modules/**/*.html", "dist/**/*.html"]
+  "excludeFiles": ["node_modules/**/*.html", "dist/**/*.html", "playwright-report/**/*.html"]
 }

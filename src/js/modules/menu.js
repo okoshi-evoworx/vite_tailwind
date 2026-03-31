@@ -10,21 +10,13 @@
  *
  */
 export default () => {
-  if (
-    !(
-      document.getElementById('header') &&
-      document.getElementById('menu') &&
-      document.getElementById('trigger')
-    )
-  )
-    return;
+  if (!(document.getElementById('header') && document.getElementById('menu') && document.getElementById('trigger'))) return;
   const header = document.getElementById('header');
   const menu = document.getElementById('menu');
   const trigger = document.getElementById('trigger');
   const main = document.getElementById('main') || '';
   const footer = document.getElementById('footer') || '';
-  const focusableSelector =
-    'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, [tabindex]:not([tabindex^="-"]), [contenteditable]';
+  const focusableSelector = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, [tabindex]:not([tabindex^="-"]), [contenteditable]';
   let previousScrollY = 0;
 
   // ヘッダーの高さを--header-heightに格納
@@ -32,10 +24,7 @@ export default () => {
     const headerResizeObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
         if (entry.borderBoxSize) {
-          document.documentElement.style.setProperty(
-            '--header-height',
-            `${entry.borderBoxSize[0].blockSize}px`,
-          );
+          document.documentElement.style.setProperty('--header-height', `${entry.borderBoxSize[0].blockSize}px`);
         }
       }
     });

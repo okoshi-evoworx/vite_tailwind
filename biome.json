@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["src/js/**", "src/css/**"],
+    "includes": ["src/js/**", "src/css/**", "**/*.html"],
     "ignoreUnknown": false
   },
   "formatter": {
@@ -18,6 +18,15 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "nursery": {
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe",
+          "options": {
+            "attributes": ["class"]
+          }
+        }
+      },
       "correctness": {
         "noUnknownMediaFeatureName": "off"
       },
@@ -25,16 +34,7 @@
         "noUnknownAtRules": {
           "level": "error",
           "options": {
-            "ignore": [
-              "import-glob",
-              "custom-media",
-              "theme",
-              "utility",
-              "variant",
-              "custom-variant",
-              "plugin",
-              "source"
-            ]
+            "ignore": ["import-glob", "custom-media", "theme", "utility", "variant", "custom-variant", "plugin", "source"]
           }
         }
       }
@@ -56,10 +56,20 @@
       "enabled": true
     }
   },
+  "html": {
+    "formatter": {
+      "enabled": false
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
   "assist": {
     "enabled": true,
     "actions": {
       "source": {
+        "noDuplicateClasses": "on",
+        "useSortedProperties": "on",
         "organizeImports": "on"
       }
     }

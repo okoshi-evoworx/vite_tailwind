@@ -1,18 +1,21 @@
 {
-    "biome.requireConfiguration": true,
-    "biome.configurationPath": "",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.biome": "explicit",
-    },
-    "files.associations": {
-      "*.css": "tailwindcss"
-    },
-    "editor.quickSuggestions": {
-      "strings": "on"
-    },
-    "tailwindCSS.includeLanguages": {
-      "plaintext": "html"
-    },
-    "tailwindCSS.emmetCompletions": true,
-    "markuplint.enable": true
+  "biome.requireConfiguration": true,
+  "biome.configurationPath": "biome.json",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit",
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "markuplint.enable": true,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.configFile": "src/css/styles.css",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  }
 }

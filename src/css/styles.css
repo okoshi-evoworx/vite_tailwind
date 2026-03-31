@@ -3,14 +3,16 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
-@plugin "daisyui";
+@plugin "daisyui" {
+  prefix: "d-";
+}
 
 @theme {
   --spacing: 0.0625rem; /* 1px */
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;/* https://ics.media/entry/200317/ */
+  --font-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif; /* https://ics.media/entry/200317/ */
   --breakpoint-xs: 22.5rem; /* 360px */
   --breakpoint-sm: 25rem; /* 400px */
   --breakpoint-md: 50rem; /* 800px */
@@ -34,9 +36,9 @@
   --text-base: 1rem; /* 16px */
   --text-base--line-height: calc(1.5 / 1); /* 1.5 */
   --text-lg: 1.125rem; /* 18px */
-  --text-lg--line-height: calc(1.75 / 1.125);/* 1.5555555556 */
+  --text-lg--line-height: calc(1.75 / 1.125); /* 1.5555555556 */
   --text-xl: 1.25rem; /* 20px */
-  --text-xl--line-height: calc(1.75 / 1.25);/* 1.4 */
+  --text-xl--line-height: calc(1.75 / 1.25); /* 1.4 */
   --text-2xl: 1.5rem; /* 24px */
   --text-2xl--line-height: calc(2 / 1.5); /* 1.3333333333 */
   --text-3xl: 1.875rem; /* 30px */
@@ -54,4 +56,3 @@
   --text-9xl: 8rem; /* 128px */
   --text-9xl--line-height: 1;
 }
-
