@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- [buildonly] <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXX');</script> [/buildonly] -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ページタイトル</title>
+    <meta name="description" content="" />
+
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@username" />
+    <meta name="twitter:image" content="" />
+
+    <link rel="canonical" href="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script>
+      // AVOID FOUC
+    </script>
+    <!-- [devonly] Chromeでのページロード時のTransition(FOUC)対策 https://css-tricks.com/the-simplest-way-to-load-css-asynchronously/ [/devonly] -->
+    <script type="module" src="/js/main.js"></script>
+    <script type="speculationrules">
+      {
+        "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
+        "prefetch": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }]
+      }
+    </script>
+  </head>
+  <body class="preload">
+    <!-- [buildonly] <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> [/buildonly] -->
+    <a href="#main" class="skip-to-content">本文へ移動</a>
+    <div class="l-container">
+      <header id="header" class="l-header">
+        <p class="sitename"><a href="/">サイト名</a></p>
+        <button type="button" id="trigger" class="l-trigger" aria-controls="menu" aria-expanded="false" aria-label="メニューを開く"><span></span></button>
+        <nav id="menu" class="l-menu" aria-hidden="true" aria-label="メニュー" inert>
+          <div role="dialog" class="contents">
+            <ul>
+              <li><a href="/about/">ABOUT</a></li>
+              <li><a href="#">Menu 2</a></li>
+              <li><a href="#">Menu 3</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main id="main" class="l-main">
+        <h1 class="font-jp font-bold text-black">404</h1>
+      </main>
+      <footer id="footer" class="l-footer">
+        <p>© 2026 EVOWORX Co.,Ltd.</p>
+        <div class="pagetop"><a href="#top">ページの先頭に戻る</a></div>
+      </footer>
+    </div>
+  </body>
+</html>

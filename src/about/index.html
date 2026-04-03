@@ -30,12 +30,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <script>
       // AVOID FOUC
     </script>
     <!-- [devonly] Chromeでのページロード時のTransition(FOUC)対策 https://css-tricks.com/the-simplest-way-to-load-css-asynchronously/ [/devonly] -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
     <script type="speculationrules">
       {
         "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
@@ -49,12 +49,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#main" class="skip-to-content">本文へ移動</a>
     <div class="l-container">
       <header id="header" class="l-header">
-        <p class="sitename">サイト名</p>
+        <p class="sitename"><a href="/">サイト名</a></p>
         <button type="button" id="trigger" class="l-trigger" aria-controls="menu" aria-expanded="false" aria-label="メニューを開く"><span></span></button>
         <nav id="menu" class="l-menu" aria-hidden="true" aria-label="メニュー" inert>
           <div role="dialog" class="contents">
             <ul>
-              <li><a href="#">Menu 1</a></li>
+              <li><a href="/about/">ABOUT</a></li>
               <li><a href="#">Menu 2</a></li>
               <li><a href="#">Menu 3</a></li>
             </ul>
@@ -62,23 +62,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </nav>
       </header>
       <main id="main" class="l-main">
-        <h1 class="font-jp font-bold text-black">ページタイトル</h1>
+        <h1 class="font-jp font-bold text-black">ABOUT</h1>
         <section id="section1">
           <h2>見出し</h2>
           <p>内容</p>
           <div class="c-sample">.c-sample</div>
           <figure class="mr-auto ml-auto w-240 md:w-480">
-            <img src="src/img/src_sample.webp" alt="" width="640" height="640" loading="lazy" />
+            <img src="../img/src_sample.webp" alt="" width="640" height="640" loading="lazy" />
           </figure>
           <figure class="mt-24 mr-auto ml-auto w-240 md:mt-48 md:w-480">
-            <img src="img/public_sample.webp" alt="" width="640" height="640" loading="lazy" />
+            <img src="/img/public_sample.webp" alt="" width="640" height="640" loading="lazy" />
           </figure>
-        </section>
-
-        <section id="section2">
-          <a class="d-btn" href="#section1">.d-btn(daisyui)</a>
-          <h2>見出し</h2>
-          <p>内容</p>
         </section>
       </main>
       <footer id="footer" class="l-footer">

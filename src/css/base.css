@@ -8,9 +8,9 @@ html:not(:has(dialog[open]), .dialog-open) {
 body {
   width: 100%;
   min-height: 100vh;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
   color: var(--color-text, CanvasText);
   background-color: var(--color-white, Canvas);
 }
@@ -19,16 +19,12 @@ body {
   scroll-margin-top: var(--header-height, 0);
 }
 
-:where(:link) {
+a {
   color: var(--color-link, LinkText);
-  text-underline-offset: 0.25em;
-  text-decoration-thickness: 0.0625rem;
   text-decoration-line: underline;
+  text-decoration-thickness: 0.0625rem;
   text-decoration-skip-ink: auto;
-}
-
-:where(:visited) {
-  color: var(--color-link, VisitedText);
+  text-underline-offset: 0.25em;
 }
 
 /* View Transiton API */

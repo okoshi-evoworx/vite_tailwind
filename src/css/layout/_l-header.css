@@ -15,4 +15,9 @@
   padding: 16px;
   color: var(--color-white);
   background-color: var(--color-gray-800);
+  .sitename a {
+    color: var(--color-white);
+    @apply hover:no-underline;
+  }
 }
+

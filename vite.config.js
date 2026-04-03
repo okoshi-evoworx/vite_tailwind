@@ -1,5 +1,6 @@
 import {defineConfig} from 'vite'
 import path from 'path';
+import { globSync } from 'glob';
 import { fileURLToPath } from 'url';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
@@ -66,6 +67,8 @@ const devOnlyComment = () => {
 }
 
 export default defineConfig({
+  root: 'src',
+  publicDir: '../public',
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
@@ -104,18 +107,20 @@ export default defineConfig({
         transformer: 'postcss',
     },
     build: {
-        outDir: 'dist',
+        outDir: '../dist',
         emptyOutDir: true,
         assetsInlineLimit: 0,
         cssMinify: false,
         cssCodeSplit: true,
         rollupOptions: {
           input: {
-            main: 'index.html',
-            styles: 'src/css/styles.css',
+            styles: 'css/styles.css',
+            ...Object.fromEntries(
+              globSync('src/**/*.html',{ posix: true }).map(file => [file.replace('src/', '').replace(/\.html$/, ''), file.replace('src/', '')])
+            )
           },
           output: {
-                entryFileNames: `js/main.js`,
+                // entryFileNames: `js/main.js`,
                 chunkFileNames: `js/[name].js`,
                 assetFileNames: (assetInfo) => {
                   // https://rollupjs.org/configuration-options/#output-assetfilenames
