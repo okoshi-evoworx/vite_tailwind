@@ -1,3 +1,7 @@
+:root {
+  scrollbar-gutter: stable;
+}
+
 /* ダイアログが開いている時はスムーススクロールOFF */
 html:not(:has(dialog[open]), .dialog-open) {
   scroll-behavior: smooth;
@@ -8,6 +12,7 @@ html:not(:has(dialog[open]), .dialog-open) {
 body {
   width: 100%;
   min-height: 100vh;
+  font-feature-settings: "palt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;

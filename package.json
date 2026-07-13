@@ -16,33 +16,36 @@
     "test": "npx playwright test"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.11.1",
-    "@biomejs/biome": "2.4.9",
-    "@playwright/test": "^1.58.2",
-    "@tailwindcss/postcss": "^4.2.2",
-    "@types/node": "^25.5.0",
-    "browserslist": "^4.28.1",
-    "concurrently": "^9.2.1",
+    "@axe-core/playwright": "^4.12.1",
+    "@biomejs/biome": "2.5.3",
+    "@playwright/test": "^1.61.1",
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^26.1.1",
+    "browserslist": "^4.28.5",
+    "concurrently": "^10.0.3",
     "glob": "^13.0.6",
     "lightningcss": "^1.32.0",
-    "markuplint": "^4.14.1",
-    "postcss": "^8.5.8",
+    "markuplint": "^4.18.3",
+    "postcss": "^8.5.16",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
     "postcss-import-ext-glob": "^2.1.1",
-    "postcss-lightningcss": "^1.0.2",
-    "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "sharp": "^0.34.5",
+    "postcss-lightningcss": "^1.1.0",
+    "prettier": "^3.9.5",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "sharp": "^0.35.3",
     "svgo": "^4.0.1",
-    "vite": "^8.0.3",
+    "vite": "^8.1.4",
     "vite-plugin-image-optimizer": "^2.0.3"
   },
   "dependencies": {
-    "daisyui": "^5.5.19",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.3.2"
   },
   "browserslist": [
     "baseline widely available"
-  ]
+  ],
+  "allowScripts": {
+    "fsevents@2.3.3": true,
+    "fsevents@2.3.2": true
+  }
 }

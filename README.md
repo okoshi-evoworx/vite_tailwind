@@ -4,8 +4,6 @@
 
 * [Tailwind CSS](https://tailwindcss.com/)
 
-* [daisyUI](https://daisyui.com/)
-
 * [Custom media queries(Lightning CSS)](https://lightningcss.dev/transpilation.html#custom-media-queries)
 
 * [Biome](https://biomejs.dev/ja/)
@@ -129,10 +127,6 @@ Tailwindで設定されている`@layer theme, base, components, utilities;`に�
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
-@import "./base.css" layer(base);
-@plugin "daisyui" {
-  prefix: "d-";
-}
 
 @theme {
 〜
@@ -145,6 +139,7 @@ Tailwindで設定されている`@layer theme, base, components, utilities;`に�
 ```css
 @import-glob "./custom-media/**/*.css";
 @import-glob "./vars/**/*.css" layer(base);
+@import-glob "./base.css" layer(base);
 @import-glob "./layout/**/*.css" layer(layout);
 @import-glob "./object/components/**/*.css" layer(components);
 @import-glob "./object/projects/**/*.css" layer(projects);

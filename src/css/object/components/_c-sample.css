@@ -3,7 +3,7 @@
   height: 100px;
   background-color: var(--color-dark-gray);
 
-  @apply mt-100 mb-100 mr-auto ml-auto p-20 grid place-items-center place-content-center text-gray-100 text-2xl;
+  @apply mt-100 mb-100 mr-auto ml-auto p-20 grid place-items-center place-content-center text-dark-gray text-2xl;
 }
 
 @media (--md) {

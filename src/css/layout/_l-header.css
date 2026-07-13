@@ -14,7 +14,7 @@
   width: 100%;
   padding: 16px;
   color: var(--color-white);
-  background-color: var(--color-gray-800);
+  background-color: var(--color-black);
   .sitename a {
     color: var(--color-white);
     @apply hover:no-underline;
